@@ -54,11 +54,62 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  switch(license) {
+    case "Apache":
+      return `[Apache](https://opensource.org/licenses/Apache-2.0)`;
+      break;
+    case "Boost":
+      return `[Boost](https://www.boost.org/LICENSE_1_0.txt)`;
+      break;
+    case "BSD 3":
+      return `[BSD 3](https://opensource.org/licenses/BSD-3-Clause)`;
+      break;
+    case "BSD 2":
+      return `[BSD 2](https://opensource.org/licenses/BSD-2-Clause)`;
+      break;
+    case "Eclipse":
+      return `[Eclipse](https://opensource.org/licenses/EPL-1.0)`;
+      break;
+    case "IBM":
+      return `[IBM](https://opensource.org/licenses/IPL-1.0)`;
+      break;
+    case "ISC":
+      return `[ISC](https://opensource.org/licenses/ISC)`;
+      break;
+    case "MIT":
+      return `[MIT](https://opensource.org/licenses/MIT)`;
+      break;
+    case "Mozilla":
+      return `[Mozilla](https://opensource.org/licenses/MPL-2.0)`;
+      break;
+    case "Perl":
+      return `[Perl](https://opensource.org/licenses/Artistic-2.0)`;
+      break;
+    case "Artistic":
+      return `[Artistic](https://opensource.org/licenses/Artistic-2.0)`;
+      break;
+    case "SIL":
+      return `[SIL](https://opensource.org/licenses/OFL-1.1)`;
+      break;
+    case "Unlicense":
+      return `[Unlicense](http://unlicense.org/)`;
+      break;
+    case "WTFPL":
+      return `[WTFPL](http://www.wtfpl.net/about/)`;
+      break;
+    case "Zlib":
+      return `[Zlib](https://opensource.org/licenses/Zlib)`;
+      break;
+    default:
+      return "";
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  return `This projects is licensed under the ${license} license.`
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {

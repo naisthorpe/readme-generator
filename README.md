@@ -14,6 +14,7 @@
   * [Contributors](##-contributors)
   * [Tests](##-tests)
   * [Questions](##-questions)
+  * [Walkthrough Video](##-walkthrough-video)
 
   ## Installation
 

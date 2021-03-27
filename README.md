@@ -44,3 +44,7 @@
   ## Questions
 
   If you have any questions about the repo, open an issue or contact me directly at [aisthorpe@gmail.com](mailto:aisthorpe@gmail.com). You can find more of my work at [naisthorpe](https://www.github.com/naisthorpe).
+  
+  ## Walkthrough Video
+  
+  [Walkthrough Video](https://youtu.be/SCWOzyCDqO8)

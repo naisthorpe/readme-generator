@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
     { 
         type: "input",
@@ -14,6 +14,16 @@ const questions = [
         type: "input",
         message: "Add your project description:",
         name: "description",
+    },
+    {
+        type: "input",
+        message: "Enter usage information:",
+        name: "usage",
+    },
+    {
+        type: "input",
+        message: "Enter GitHub usernames of contributors:",
+        name: "contributors",
     },
     {
         type: "list",
@@ -47,6 +57,11 @@ const questions = [
         type: "input",
         message: "Enter your email:",
         name: "email",
+    },
+    {
+        type:"input",
+        message: "Enter file name (do not include extension)",
+        name: "filename"
     }
 ];
 
@@ -59,12 +74,12 @@ function writeToFile(fileName, data) {
 
 // writeToFile("test.md", "# this is a title");
 
-// TODO: Create a function to initialize app
+// Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
         .then((response) => {
-            writeToFile("test2.md", generateMarkdown(response));
+            writeToFile(`${response.filename}.md`, generateMarkdown(response));
         });
     }
 
